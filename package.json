@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "^4.12.3",
-    "express-http-proxy": "^0.10.1"
+    "express-http-proxy": "^0.10.1",
+    "mongodb": "^2.2.11"
   }
 }
