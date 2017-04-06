@@ -1,6 +1,9 @@
 var express = require("express");
 var app = express();
 var proxy = require('express-http-proxy');
+var compression = require('compression');
+
+app.use(compression());
 
 app.use('/proxy', proxy('www.google.com', {
 //  forwardPath: function(req, res) {
