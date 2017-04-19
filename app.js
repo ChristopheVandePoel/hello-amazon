@@ -13,7 +13,12 @@ app.use('/proxy', proxy('www.google.com', {
 
 app.use('/world', express.static('../world'));
 
-app.use('/', express.static('../frontend-prod'));
+app.use('/', express.static(__dirname + './../frontend-prod'));
+
+app.get('*', function(request, response) {
+  response.sendFile('index.html', {root: './../frontend-prod'});
+});
+
 
 //app.get("/",function(req,res){
 //        res.send("<h1>Hey lisa!</h1>");
